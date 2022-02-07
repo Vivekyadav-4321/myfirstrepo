@@ -2,7 +2,7 @@ const wifi = require("wifi-password")
 const express = require("express")
 const app = express()
 var i = 5
-
+const port = 8000 || process.env.port
 app.get("/home", (req, res)=>{
 
 
@@ -42,5 +42,5 @@ app.get("/send",(req,res)=>{
 
 })
 
-app.listen(1234,()=>{console.log("server is live");})
+app.listen(port,()=>{console.log("server is live");})
 
